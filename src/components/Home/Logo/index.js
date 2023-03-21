@@ -2,11 +2,10 @@ import './index.scss'
 import LogoS from  '../../../assets/images/logo-n.png'
 import { useEffect, useRef } from 'react'
 import {gsap} from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin'
+
 const Logo = () => {
     const solidLogoRef = useRef()
     useEffect(() => {
-        gsap.registerPlugin(DrawSVGPlugin)
         gsap.fromTo(
             solidLogoRef.current,
             {
