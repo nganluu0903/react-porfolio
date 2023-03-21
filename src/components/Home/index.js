@@ -34,7 +34,7 @@ const Home = () => {
                 idx={30}/>
                 </h1>
                 <h2>
-                    Python / .NET / DevOps Frameworks
+                   Backend / DevOps 
                 </h2>
                 <Link to='/contact' className='flat-button'>CONTACT ME</Link>
             </div>
