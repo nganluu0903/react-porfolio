@@ -17,6 +17,19 @@ jobs:
   - checkout: self
     clean: true
     fetchTags: false
+    # Download secure file from azure library
+  - task: DownloadSecureFile@1
+    inputs:
+      secureFile: '.env'
+
+  # Copy the .env file
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Agent.TempDirectory)'
+      contents: '**/*.env'
+      targetFolder: '$(Build.Repository.LocalPath)'
+      cleanTargetFolder: false
+  - bash: ls $(Build.Repository.LocalPath)
   - task: Npm@1
     displayName: npm install
     inputs:
