@@ -22,7 +22,7 @@ const Contact = () => {
                 .then(
                     () => {
                         alert('Sent!')
-                        window.location.reload(false)
+                        window.location = window.location
                     },
                     () => {
                         alert('Failed')
